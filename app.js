@@ -15,6 +15,9 @@ app.get("/users", (req,res) => {
 })
 
 
-app.listen(process.env.PORT, () => {
-    console.log("server started...")
+const PORT = process.env.PORT || 10000
+const HOST = "0.0.0.0"
+
+app.listen(PORT,HOST, () => {
+    console.log(`Server started at ${PORT} ${HOST}`)
 })
